@@ -12,6 +12,50 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
+        appBar:  AppBar(
+          backgroundColor: Colors.amber,
+          title: Center(
+            child: Text(
+              "My App",
+              style: TextStyle(
+                fontFamily: 'EBGaramond',
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ),
+        drawer: Drawer(
+          child: Column(
+            children: [ 
+              Image(image:  AssetImage('assets/logo.png'),width: 100, height: 100),
+              SizedBox(height: 20),
+            ListTile(
+              leading: Icon(Icons.home,color: Colors.black,),
+              title: Text(
+                'Home',
+                style: TextStyle(
+                  fontFamily: 'EBGaramond',
+                  fontSize: 18,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+             ListTile(
+              leading: Icon(Icons.access_alarm,color: Colors.black,),
+              title: Text(
+                'Clock',
+                style: TextStyle(
+                  fontFamily: 'EBGaramond',
+                  fontSize: 18,
+                  color: Colors.black,
+                ),
+              ),
+             )
+            ],
+          )
+        ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal:55, vertical: 30),
           child: Column(
@@ -113,6 +157,14 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.amber,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.access_alarm),label: 'Clock')
+
+          ] 
+          ),
       ),
     );
   }
