@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.amber,
           title: Center(
             child: Text(
@@ -28,65 +28,73 @@ class MyApp extends StatelessWidget {
         ),
         drawer: Drawer(
           child: Column(
-            children: [ 
-              Image(image:  AssetImage('assets/logo.png'),width: 100, height: 100),
+            children: [
+              Image(
+                image: AssetImage('assets/logo.png'),
+                width: 100,
+                height: 100,
+              ),
               SizedBox(height: 20),
-            ListTile(
-              leading: Icon(Icons.home,color: Colors.black,),
-              title: Text(
-                'Home',
-                style: TextStyle(
-                  fontFamily: 'EBGaramond',
-                  fontSize: 18,
-                  color: Colors.black,
+              ListTile(
+                leading: Icon(Icons.home, color: Colors.black),
+                title: Text(
+                  'Home',
+                  style: TextStyle(
+                    fontFamily: 'EBGaramond',
+                    fontSize: 18,
+                    color: Colors.black,
+                  ),
                 ),
               ),
-            ),
-             ListTile(
-              leading: Icon(Icons.access_alarm,color: Colors.black,),
-              title: Text(
-                'Clock',
-                style: TextStyle(
-                  fontFamily: 'EBGaramond',
-                  fontSize: 18,
-                  color: Colors.black,
+              ListTile(
+                leading: Icon(Icons.access_alarm, color: Colors.black),
+                title: Text(
+                  'Clock',
+                  style: TextStyle(
+                    fontFamily: 'EBGaramond',
+                    fontSize: 18,
+                    color: Colors.black,
+                  ),
                 ),
               ),
-             )
             ],
-          )
+          ),
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:55, vertical: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 55, vertical: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-              Image(image:  AssetImage('assets/logo.png'),width: 50, height: 50),
-              Row(
-                children: [
-              Text(
-                'Maintenance',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'EBGaramond',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-              Text(
-                'Box',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'EBGaramond',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-                ],
-              ),
+                  Image(
+                    image: AssetImage('assets/logo.png'),
+                    width: 50,
+                    height: 50,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Maintenance',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontFamily: 'EBGaramond',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        'Box',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontFamily: 'EBGaramond',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
               SizedBox(height: 30),
@@ -160,11 +168,13 @@ class MyApp extends StatelessWidget {
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.amber,
           items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.access_alarm),label: 'Clock')
-
-          ] 
-          ),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.access_alarm),
+              label: 'Clock',
+            ),
+          ],
+        ),
       ),
     );
   }
